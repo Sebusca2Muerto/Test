@@ -8,15 +8,25 @@
   <div id="content"></div>
 
   <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const content = urlParams.get('content'); 
+    function updateContent() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const content = urlParams.get('content');
 
-    if (content) {
-      document.getElementById('content').textContent = content;
-    } else {
-      document.getElementById('content').textContent = "No content provided.";
+      if (content) {
+        document.getElementById('content').textContent = content;
+      } else {
+        document.getElementById('content').textContent = "No content provided.";
+      }
     }
+
+    updateContent(); 
+
+    setInterval(updateContent, 1000); 
   </script>
+
+</body>
+</html>
+
 
 </body>
 </html>
