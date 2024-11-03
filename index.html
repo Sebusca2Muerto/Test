@@ -1,9 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Web Page</title>
+  <title>Dynamic Content</title>
 </head>
 <body>
-  <h1>A co</h1>
+
+  <div id="content"></div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const content = urlParams.get('content'); 
+
+    if (content) {
+      document.getElementById('content').textContent = content;
+    } else {
+      document.getElementById('content').textContent = "No content provided.";
+    }
+  </script>
+
 </body>
 </html>
