@@ -1,32 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dynamic Content</title>
+  <title>Timestamp Test</title>
 </head>
 <body>
 
-  <div id="content"></div>
+  <div id="timestamp"></div>
 
   <script>
-    function updateContent() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const content = urlParams.get('content');
-
-      if (content) {
-        document.getElementById('content').textContent = content;
-      } else {
-        document.getElementById('content').textContent = "No content provided.";
-      }
+    function updateTimestamp() {
+      document.getElementById('timestamp').textContent = Date.now();
     }
 
-    updateContent(); 
-
-    setInterval(updateContent, 1000); 
+    updateTimestamp(); 
+    setInterval(updateTimestamp, 1000); 
   </script>
-
-</body>
-</html>
-
 
 </body>
 </html>
