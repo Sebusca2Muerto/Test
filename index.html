@@ -5,11 +5,11 @@
 </head>
 <body>
 
-  <div id="timestamp"></div>
+  <div id="timestamp">0</div>
 
   <script>
     function updateTimestamp() {
-      document.getElementById('timestamp').textContent = Date.now();
+      document.getElementById('timestamp').textContent = document.getElementById('timestamp').textContent + 1;
     }
 
     updateTimestamp(); 
