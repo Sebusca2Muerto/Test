@@ -8,9 +8,10 @@
   <div id="timestamp"></div>
 
   <script>
-    var a = 0;
+    document.getElementById('timestamp').textContent = 0;
+    
     function test() {
-      document.getElementById('timestamp').textContent = a + 1;
+      document.getElementById('timestamp').textContent = document.getElementById('timestamp').innerHTML + 1;
     }
 
     test(); 
