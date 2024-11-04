@@ -5,11 +5,12 @@
 </head>
 <body>
 
-  <div id="timestamp">0</div>
+  <div id="timestamp"></div>
 
   <script>
+    var a = 0;
     function updateTimestamp() {
-      document.getElementById('timestamp').textContent = document.getElementById('timestamp').innerHTML + 1;
+      document.getElementById('timestamp').textContent = a + 1;
     }
 
     updateTimestamp(); 
